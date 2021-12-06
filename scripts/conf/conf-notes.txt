@@ -1,0 +1,13 @@
+################################
+
+Common targets are:
+    openavr-image
+    openavr-image-dev
+    openavr-image-gw
+
+Common bitbake commands:
+    bitbake openavr-image
+    bitbake openavr-image-dev
+    bitbake openavr-image-gw
+
+################################

@@ -1,0 +1,41 @@
+#!/bin/bash
+#
+# This script only needs to be sourced once to setup the initial build dir.
+# After that, you just source the oe-init-build-env script directly. Although,
+# it should be safe to always use this script.
+#
+
+unset BUILDDIR
+
+FILENAME="$(basename ${BASH_SOURCE[0]})"
+TGT="${FILENAME#setup-env}"
+BUILDDIR="build${TGT:=-rpi4}"
+
+unset TGT
+unset FILENAME
+
+echo "BUILDDIR = ${BUILDDIR}"
+
+export TEMPLATECONF="${PWD}/scripts/conf"
+
+export ENV_SCRIPT="./oe/poky/oe-init-build-env"
+
+if [ -f ${ENV_SCRIPT} ]
+then
+    source ${ENV_SCRIPT} ${BUILDDIR}
+
+    for newpath in "$(dirname ${BBPATH})/scripts"
+    do
+        # Remove any existences of $newpath from $PATH
+        PATH=$(echo $PATH | sed -re "s#(^|:)$newpath(:|$)#\2#g;s#^:##")
+
+        # Add $newpath to $PATH
+        PATH="$PATH:$newpath"
+    done
+    export PATH
+else
+    {
+        echo "Can not find ${ENV_SCRIPT} script."
+        echo "Are you in the right directory?"
+    } 1>&2
+fi

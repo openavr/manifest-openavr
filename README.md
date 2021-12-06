@@ -48,7 +48,7 @@ Getting Started
 
 4.  Initialize the Yocto/OpenEmbedded Environment:
 
-        $ source ./setup-env
+        $ source ./setup-env-${TGT}
 
     This copies default configuration information into the `build/conf`
     directory and sets up some environment variables for OpenEmbedded.  You may

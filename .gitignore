@@ -1,0 +1,9 @@
+.*.swp
+
+/.repo
+/oe
+
+build-*/conf/templateconf.cfg
+build-*/*.log
+build-*/cache
+build-*/tmp
