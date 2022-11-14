@@ -1,0 +1,27 @@
+-----------------------
+Build Configuration:  |
+-----------------------
+DISTRO = openavr
+DISTRO_VERSION = 4.1
+DISTRO_CODENAME = langdale
+IMAGE_BASENAME = openavr-image
+IMAGE_NAME = openavr-image-beagleboneai-20221114145633
+MACHINEOVERRIDES = armv7a:ti-soc:omap-a15:dra7xx:beagleboneai
+MACHINE_ARCH = beagleboneai
+SDK_NAME = openavr-glibc-x86_64-openavr-image-armv7at2hf-neon-beagleboneai
+SUMMARY = A console-only image that fully supports the target device hardware.
+USER = troth
+DATETIME = 20221114145633
+-----------------------
+Layer Revisions:      |
+-----------------------
+meta              = HEAD:744cea3bfeebcde151499a424fea6bf98d226c9b
+meta-poky         = HEAD:744cea3bfeebcde151499a424fea6bf98d226c9b
+meta-yocto-bsp    = HEAD:744cea3bfeebcde151499a424fea6bf98d226c9b
+meta-arm-toolchain = HEAD:fcf6f0699c3bc4ea4e9de04fab196f23ac0b0b07
+meta-arm          = HEAD:fcf6f0699c3bc4ea4e9de04fab196f23ac0b0b07
+meta-ti-bsp       = HEAD:c023b50537fc513cbbc91b00ed0ead77fbac1070
+meta-oe           = HEAD:d04444509a220fcb61496d7e64f3ba09c647543b
+meta-networking   = HEAD:d04444509a220fcb61496d7e64f3ba09c647543b
+meta-python       = HEAD:d04444509a220fcb61496d7e64f3ba09c647543b
+meta-openavr      = HEAD:a3d507334b226f0cc517782f7e6298659bda383b
