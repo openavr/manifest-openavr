@@ -4,7 +4,10 @@
 /oe
 
 build-*/conf/templateconf.cfg
+build-*/conf/conf-notes.txt
 build-*/*.log
 build-*/*.env
 build-*/cache
 build-*/tmp
+build-*/deploy-ti
+build-*/conf/user.conf
